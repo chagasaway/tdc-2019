@@ -1,0 +1,12 @@
+type Query {
+  requestMoney: RequestMoney!
+}
+
+type Mutation {
+  createRequestMoney(amount: Number!): RequestMoney!
+}
+
+type RequestMoney {
+  qrcode: String!;
+  amount: Number!;
+}
