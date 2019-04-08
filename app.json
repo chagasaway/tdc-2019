@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "TDC",
+    "scheme": "tdc-2019",
     "slug": "tdc-2019",
     "privacy": "public",
     "sdkVersion": "32.0.0",

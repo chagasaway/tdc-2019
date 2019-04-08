@@ -1,21 +1,12 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+// import React from 'react';
+// import Expo from 'expo';
+import { AppNavigator } from './navigation/AppNavigator';
+import { createAppContainer } from 'react-navigation';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>app!</Text>
-      </View>
-    );
-  }
-}
+const App = createAppContainer(AppNavigator);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
+
+// const prefix = Expo.Linking.makeUrl('/');
+
+// export const MainApp = () => <App uriPrefix={prefix} />;
