@@ -1,16 +1,13 @@
 type Query {
-  info: String!
-  posts: [Post!]!
+  requestMoney: RequestMoney!
 }
 
 type Mutation {
-  createPost(url: String!, description: String!): Post!
-  updatePost(id: ID!, url: String!, description: String!): Post
-  deletePost(id: ID!): Post
+  createRequestMoney(amount: Int!): RequestMoney!
 }
 
-type Post {
+type RequestMoney {
   id: ID!
-  url: String!
-  description: String!
+  amount: Int!
+  qrCode: String!
 }
