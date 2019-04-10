@@ -7,6 +7,7 @@ export const Title: React.SFC = ({ children }) => (
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 20,
+    textAlign: 'center',
+    fontSize: 25,
   }
 });
