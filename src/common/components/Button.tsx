@@ -1,13 +1,13 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-interface ButtonProps {
-  onSubmit: () => void;
+export interface ButtonProps {
+  onPress: () => void;
   label: string;
 }
 
-export const Button: React.SFC<ButtonProps> = ({ onSubmit, label }) => (
-  <TouchableOpacity style={styles.button} onPress={onSubmit}>
+export const Button: React.SFC<ButtonProps> = ({ onPress, label }) => (
+  <TouchableOpacity style={styles.button} onPress={onPress}>
     <Text style={styles.label}>{label}</Text>
   </TouchableOpacity>
 );

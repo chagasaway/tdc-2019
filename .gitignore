@@ -6,3 +6,4 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
+.jest
