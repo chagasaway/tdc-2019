@@ -4,7 +4,7 @@ import { Title } from '../../../../common/components/Title';
 import { MoneyInput } from '../../../../common/components/MoneyInput';
 import { SpaceFiller } from '../../../../common/components/SpaceFiller';
 
-interface AmountInputViewProps {
+export interface AmountInputViewProps {
   onSubmit: () => void;
   onAmountChange: (amount: number) => void;
 }
