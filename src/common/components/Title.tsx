@@ -5,7 +5,7 @@ export const Title: React.SFC = ({ children }) => (
   <Text style={styles.title}>{children}</Text>
 );
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     fontSize: 25,
