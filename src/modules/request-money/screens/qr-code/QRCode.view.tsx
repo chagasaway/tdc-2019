@@ -3,7 +3,7 @@ import { Button } from '../../../../common/components/Button';
 import { Title } from '../../../../common/components/Title';
 import { SpaceFiller } from '../../../../common/components/SpaceFiller';
 
-interface QRCodeViewProps {
+export interface QRCodeViewProps {
   onShare: () => void;
 }
 
