@@ -1,33 +1,16 @@
-const { GraphQLServer } = require('graphql-yoga');
+var app = require('express')();
+var http = require('http').Server(app);
 
-const requestMoney = { id: 1, amount: 10, qrCode: 'abcde' };
-
-const resolvers = {
-  Query: {
-    requestMoney: () => requestMoney,
-  },
-
-  Mutation: {
-    createRequestMoney: (root, { amount }) => {
-      return requestMoney;
-    },
-  },
-
-  RequestMoney: {
-    id: root => root.id,
-    amount: root => root.amount,
-    qrCode: root => root.qrCode
-  }
-};
-
-const server = new GraphQLServer({
-  typeDefs: './src/schema.graphql',
-  resolvers
+app.post('/request-money', function(_, res) {
+  console.log('Creating request money with amount...');
+  res.setHeader('Content-type', 'application/json');
+  res.end(JSON.stringify({
+    id: 123,
+    amount: 5,
+    qrCode: 'abcdef'
+  }));
 });
 
-server.start(
-  {
-    port: 4000
-  },
-  ({ port }) => console.log(`Server is running on port ${port}.`)
-);
+http.listen(3000, function() {
+  console.log('Server listening on http://127.0.0.1:3000');
+});

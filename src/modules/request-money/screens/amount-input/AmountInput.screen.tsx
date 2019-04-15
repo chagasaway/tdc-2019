@@ -3,7 +3,7 @@ import { NavigationInjectedProps } from 'react-navigation';
 import { RequestMoneyScreens } from '../../navigation/RequestMoneyNavigator';
 import { AmountInputContainer } from './AmountInput.container';
 import { BaseScreen } from '../../../../common/components/BaseScreen';
-import { RequestMoney } from '../../api/createRequestMoney';
+import { RequestMoney } from '../../../../common/api/RequestMoneyAPI';
 
 export class AmountInputScreen extends Component<NavigationInjectedProps> {
   private navigateBack = () => {
