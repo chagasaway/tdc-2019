@@ -13,9 +13,11 @@ const render = (props: NavigationInjectedProps) => {
 describe("QRCode Screen", () => {
   it("should navigate back", () => {
     // given
+    const qrCode = 'abcde';
     const props = {
       navigation: {
         pop: jest.fn(),
+        getParam: jest.fn().mockReturnValue(qrCode),
       },
     };
 

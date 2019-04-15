@@ -10,9 +10,13 @@ export class QRCodeScreen extends Component<NavigationInjectedProps> {
   }
 
   render() {
+    const qrCode = this.props.navigation.getParam('qrCode');
     return (
       <BaseScreen>
-        <QRCodeContainer navigateBack={this.navigateBack} />
+        <QRCodeContainer
+          qrCode={qrCode}
+          navigateBack={this.navigateBack}
+        />
       </BaseScreen>
     );
   }

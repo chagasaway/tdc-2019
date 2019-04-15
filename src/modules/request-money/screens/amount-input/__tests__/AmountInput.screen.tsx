@@ -35,13 +35,18 @@ describe("AmountInput Screen", () => {
         navigate: jest.fn(),
       },
     };
+    const requestMoney = {
+      id: 12,
+      amount: 1000,
+      qrCode: 'abcde',
+    }
 
     // when
     const { testInstance } = render(props as any);
-    testInstance.instance.navigateToQRCode();
+    testInstance.instance.navigateToQRCode(requestMoney);
 
     // then
-    expect(props.navigation.navigate).toBeCalledWith(RequestMoneyScreens.QRCode, {});
+    expect(props.navigation.navigate).toBeCalledWith(RequestMoneyScreens.QRCode, requestMoney);
   });
 
   it("should navigate to Error screen", () => {
