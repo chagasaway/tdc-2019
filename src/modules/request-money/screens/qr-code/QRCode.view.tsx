@@ -2,20 +2,19 @@ import React, { Fragment } from 'react';
 import { Button } from '../../../../common/components/Button';
 import { Title } from '../../../../common/components/Title';
 import { SpaceFiller } from '../../../../common/components/SpaceFiller';
-import { QRCode } from '../../../../common/components/QRCode';
-import { RequestMoney } from '../../../../common/api/RequestMoneyAPI';
+import { QRCode } from './components/QRCode';
 
-interface AmountInputViewProps {
-  requestMoney: RequestMoney;
+export interface QRCodeViewProps {
+  qrCode: string;
   onShare: () => void;
 }
 
-export const QRCodeView: React.SFC<AmountInputViewProps> = ({ requestMoney, onShare }) => (
+export const QRCodeView: React.SFC<QRCodeViewProps> = ({ qrCode, onShare }) => (
   <Fragment>
     <SpaceFiller />
-    <Title>Compartilhe a cobrança abaixo</Title>
-    <QRCode value={requestMoney.qrCode} />
+    <Title>Compartilhe seu QR Code</Title>
+    <QRCode value={qrCode} />
     <SpaceFiller />
-    <Button onSubmit={onShare} label='COMPARTILHAR' />
+    <Button onPress={onShare} label='COMPARTILHAR' />
   </Fragment>
 );

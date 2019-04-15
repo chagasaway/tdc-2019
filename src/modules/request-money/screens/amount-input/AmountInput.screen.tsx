@@ -12,7 +12,7 @@ export class AmountInputScreen extends Component<NavigationInjectedProps> {
   }
 
   private navigateToQRCode = (requestMoney: RequestMoney) => {
-    this.props.navigation.navigate(RequestMoneyScreens.QRCode, { requestMoney });
+    this.props.navigation.navigate(RequestMoneyScreens.QRCode, requestMoney);
   }
 
   private navigateToError = () => {

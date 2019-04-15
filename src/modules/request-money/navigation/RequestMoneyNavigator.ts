@@ -1,5 +1,6 @@
 import { AmountInputScreen } from "../screens/amount-input/AmountInput.screen";
 import { QRCodeScreen } from "../screens/qr-code/QRCode.screen";
+import { ErrorScreen } from "../screens/error/Error.screen";
 
 export const RequestMoneyScreens = {
   AmountInput: 'RequestMoney/AmountInput',
@@ -10,10 +11,11 @@ export const RequestMoneyScreens = {
 export const routes = {
   [RequestMoneyScreens.AmountInput]: {
     screen: AmountInputScreen,
-    path: '',
   },
   [RequestMoneyScreens.QRCode]: {
     screen: QRCodeScreen,
-    path: '',
-  }
+  },
+  [RequestMoneyScreens.Error]: {
+    screen: ErrorScreen,
+  },
 };

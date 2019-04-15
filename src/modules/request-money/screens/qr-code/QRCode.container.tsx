@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import { QRCodeView } from './QRCode.view';
-import { RequestMoney } from '../../../../common/api/RequestMoneyAPI';
+import { Alert } from 'react-native';
 
-interface QRCodeContainerProps {
-  requestMoney: RequestMoney;
-  dismiss: () => void;
+export interface QRCodeContainerProps {
+  qrCode: string;
+  navigateBack: () => boolean;
 }
 
 export class QRCodeContainer extends Component<QRCodeContainerProps> {
   private handleShare = () => {
-    alert('Sharing request money...');
+    Alert.alert('Shared (:');
+    this.props.navigateBack();
   }
 
   render() {
-    const { requestMoney } = this.props;
+    const { qrCode } = this.props;
     return (
       <QRCodeView
-        requestMoney={requestMoney}
+        qrCode={qrCode}
         onShare={this.handleShare}
       />
     );

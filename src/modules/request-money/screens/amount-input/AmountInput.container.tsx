@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { AmountInputView } from './AmountInput.view';
 import { createRequestMoney, RequestMoney } from '../../../../common/api/RequestMoneyAPI';
 
-interface AmountInputContainerProps {
+export interface AmountInputContainerProps {
   navigateBack: () => boolean;
   navigateToQRCode: (requestMoney: RequestMoney) => void;
   navigateToError: () => void;
@@ -17,7 +17,7 @@ export class AmountInputContainer extends Component<AmountInputContainerProps, A
     amount: 0,
   }
 
-  private onAmountChange = (amount: number) => {
+  private handleAmountChange = (amount: number) => {
     this.setState({ amount });
   }
 
@@ -26,7 +26,7 @@ export class AmountInputContainer extends Component<AmountInputContainerProps, A
       const { amount } = this.state;
       const requestMoney = await createRequestMoney(amount);
       this.props.navigateToQRCode(requestMoney);
-    } catch (e) {
+    } catch {
       this.props.navigateToError();
     }
   }
@@ -34,7 +34,7 @@ export class AmountInputContainer extends Component<AmountInputContainerProps, A
   render() {
     return (
       <AmountInputView
-        onAmountChange={this.onAmountChange}
+        onAmountChange={this.handleAmountChange}
         onSubmit={this.handleSubmit}
       />
     );
