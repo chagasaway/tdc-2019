@@ -12,6 +12,6 @@ export const ErrorView: React.SFC<ErrorViewProps> = ({ navigateBack }) => (
     <SpaceFiller />
     <Title>Desculpe, algo deu errado :(</Title>
     <SpaceFiller />
-    <Button onPress={navigateBack} label='VOLTAR' />
+    <Button testID='closeButton' onPress={navigateBack} label='VOLTAR' />
   </Fragment>
 );

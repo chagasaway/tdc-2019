@@ -4,7 +4,7 @@ import TestRenderer from 'react-test-renderer';
 
 import { QRCodeContainer, QRCodeContainerProps } from '../QRCode.container';
 
-jest.mock('../../../api/createRequestMoney');
+jest.mock('../../../api/RequestMoneyAPI');
 
 const render = (props: QRCodeContainerProps) => {
   const testRenderer = TestRenderer.create(<QRCodeContainer {...props} />);

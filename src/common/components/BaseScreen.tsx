@@ -1,8 +1,12 @@
 import React from 'react';
 import { StyleSheet, KeyboardAvoidingView } from 'react-native';
 
-export const BaseScreen: React.SFC = ({ children }) => (
-  <KeyboardAvoidingView style={styles.wrapper} behavior="padding" enabled keyboardVerticalOffset={120}>
+interface BaseScreenProps {
+  testID?: string;
+}
+
+export const BaseScreen: React.SFC<BaseScreenProps> = ({ children, testID }) => (
+  <KeyboardAvoidingView testID={testID} style={styles.wrapper} behavior="padding" enabled keyboardVerticalOffset={120}>
     {children}
   </KeyboardAvoidingView>
 );

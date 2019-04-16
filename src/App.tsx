@@ -3,9 +3,7 @@
 import { AppNavigator } from './navigation/AppNavigator';
 import { createAppContainer } from 'react-navigation';
 
-const App = createAppContainer(AppNavigator);
-
-export default App;
+export const App = createAppContainer(AppNavigator);
 
 // const prefix = Expo.Linking.makeUrl('/');
 

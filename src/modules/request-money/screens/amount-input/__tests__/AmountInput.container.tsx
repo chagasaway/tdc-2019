@@ -2,9 +2,9 @@ import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
 import { AmountInputContainer, AmountInputContainerProps } from '../AmountInput.container';
-import { createRequestMoney } from '../../../api/createRequestMoney';
+import { createRequestMoney } from '../../../api/RequestMoneyAPI';
 
-jest.mock('../../../api/createRequestMoney');
+jest.mock('../../../api/RequestMoneyAPI');
 
 const render = (props: AmountInputContainerProps) => {
   const testRenderer = TestRenderer.create(<AmountInputContainer {...props} />);

@@ -15,6 +15,6 @@ export const QRCodeView: React.SFC<QRCodeViewProps> = ({ qrCode, onShare }) => (
     <Title>Compartilhe seu QR Code</Title>
     <QRCode value={qrCode} />
     <SpaceFiller />
-    <Button onPress={onShare} label='COMPARTILHAR' />
+    <Button testID='shareBtn' onPress={onShare} label='COMPARTILHAR' />
   </Fragment>
 );

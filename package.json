@@ -5,7 +5,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "jest --config .jestrc.json"
+    "test": "jest --config jest.config.js"
   },
   "dependencies": {
     "expo": "^32.0.0",
@@ -21,9 +21,12 @@
     "@types/react-test-renderer": "16.8.1",
     "babel-preset-expo": "^5.0.0",
     "jest": "24.7.1",
+    "jest-fetch-mock": "2.1.2",
+    "react-native-testing-library": "1.7.0",
     "react-test-renderer": "16.8.6",
     "ts-jest": "24.0.2",
-    "typescript": "3.4.3"
+    "typescript": "3.4.3",
+    "wait-for-expect": "1.1.1"
   },
   "private": true
 }

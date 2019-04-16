@@ -1,4 +1,4 @@
-{
+module.exports = {
   "preset": "react-native",
   "moduleFileExtensions": [
     "ts",
@@ -18,5 +18,7 @@
   "moduleDirectories": [
     "src",
     "node_modules"
-  ]
+  ],
+  "automock": false,
+  "setupFiles": ["./setupJest.ts"]
 }
