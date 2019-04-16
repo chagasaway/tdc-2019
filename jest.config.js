@@ -18,7 +18,5 @@ module.exports = {
   "moduleDirectories": [
     "src",
     "node_modules"
-  ],
-  "automock": false,
-  "setupFiles": ["./setupJest.ts"]
+  ]
 }
