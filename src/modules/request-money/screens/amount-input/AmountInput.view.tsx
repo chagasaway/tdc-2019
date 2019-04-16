@@ -13,8 +13,8 @@ export const AmountInputView: React.SFC<AmountInputViewProps> = ({ onSubmit, onA
   <Fragment>
     <SpaceFiller />
     <Title>Quanto você gostaria de cobrar?</Title>
-    <MoneyInput onAmountChange={onAmountChange} />
+    <MoneyInput testID='amountInput' onAmountChange={onAmountChange} />
     <SpaceFiller />
-    <Button onPress={onSubmit} label='CONFIRMAR' />
+    <Button testID='confirmButton' onPress={onSubmit} label='CONFIRMAR' />
   </Fragment>
 );

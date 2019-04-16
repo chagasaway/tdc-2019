@@ -11,7 +11,7 @@ export class ErrorScreen extends Component<NavigationInjectedProps> {
 
   render() {
     return (
-      <BaseScreen>
+      <BaseScreen testID='ErrorScreen'>
         <ErrorView navigateBack={this.navigateBack} />
       </BaseScreen>
     );

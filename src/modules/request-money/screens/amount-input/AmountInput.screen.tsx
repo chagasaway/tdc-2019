@@ -3,7 +3,7 @@ import { NavigationInjectedProps } from 'react-navigation';
 import { RequestMoneyScreens } from '../../navigation/RequestMoneyNavigator';
 import { AmountInputContainer } from './AmountInput.container';
 import { BaseScreen } from '../../../../common/components/BaseScreen';
-import { RequestMoney } from '../../../../common/api/RequestMoneyAPI';
+import { RequestMoney } from '../../api/RequestMoneyAPI';
 
 export class AmountInputScreen extends Component<NavigationInjectedProps> {
   private navigateBack = () => {
@@ -21,7 +21,7 @@ export class AmountInputScreen extends Component<NavigationInjectedProps> {
 
   render() {
     return (
-      <BaseScreen>
+      <BaseScreen testID='AmountInputScreen'>
         <AmountInputContainer
           navigateBack={this.navigateBack}
           navigateToQRCode={this.navigateToQRCode}
