@@ -1,7 +1,7 @@
 const { reloadApp } = require('detox-expo-helpers');
 
 describe('Request money', () => {
-  beforeEach(async () => {
+  beforeAll(async () => {
     await reloadApp();
   });
 
