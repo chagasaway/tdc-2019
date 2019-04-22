@@ -1,4 +1,4 @@
-import { by, element } from 'detox';
+import { by, element, expect } from 'detox';
 
 export class QRCodePageObject {
 
