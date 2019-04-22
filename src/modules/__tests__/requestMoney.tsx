@@ -1,5 +1,6 @@
 import { RenderAPI } from 'react-native-testing-library';
 import waitForExpect from 'wait-for-expect';
+import { FetchMock } from 'jest-fetch-mock/types';
 
 import { AmountInputPageObject } from '../../../integration-tests/page-objects/AmountInputPageObject';
 import { QRCodePageObject } from '../../../integration-tests/page-objects/QRCodePageObject';
@@ -7,20 +8,15 @@ import { ErrorPageObject } from '../../../integration-tests/page-objects/ErrorPa
 import { renderApp } from '../../../integration-tests/config/renderApp';
 import { requestMoney } from '../../../integration-tests/mocks/createRequestMoney';
 
-jest.mock('react-native-gesture-handler', () => ({
-  PanGestureHandler: 'PanGestureHandler',
-  BaseButton: 'BaseButton',
-}));
-
-jest.mock('react-native-safe-area-view');
+const fetchMock = (fetch as FetchMock);
 
 describe('Request Money', () => {
   describe('success QR code creation & share', () => {
     let app: RenderAPI;
 
     beforeAll(() => {
-      // fetch.resetMocks();
-      // fetch.mockResponseOnce(JSON.stringify(requestMoney));
+      fetchMock.resetMocks();
+      fetchMock.mockResponseOnce(JSON.stringify(requestMoney));
       app = renderApp();
     });
 
@@ -80,8 +76,8 @@ describe('Request Money', () => {
     let app: RenderAPI;
 
     beforeAll(() => {
-      // fetch.resetMocks();
-      // fetch.mockResponseOnce(JSON.stringify(requestMoney));
+      fetchMock.resetMocks();
+      fetchMock.mockReject(new Error());
       app = renderApp();
     });
 

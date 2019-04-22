@@ -18,6 +18,9 @@ module.exports = {
     "<rootDir>/node_modules/"
   ],
   "cacheDirectory": ".jest/cache",
+  "setupFiles": [
+    "./jest.setup.ts"
+  ],
   "moduleDirectories": [
     "src",
     "node_modules"
