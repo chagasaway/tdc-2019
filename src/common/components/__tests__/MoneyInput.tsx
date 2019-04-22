@@ -16,6 +16,7 @@ describe("MoneyInput", () => {
   it("should display a input with correct styles", () => {
     // given
     const props = {
+      amount: 20,
       onAmountChange: jest.fn(),
     };
 
