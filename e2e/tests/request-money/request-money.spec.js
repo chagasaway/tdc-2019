@@ -22,6 +22,6 @@ describe('Request money', () => {
   });
 
   it('should share the qrcode', async () => {
-    await element(by.id('shareBtn')).tap();
+    await element(by.id('shareButton')).tap();
   });
 });
