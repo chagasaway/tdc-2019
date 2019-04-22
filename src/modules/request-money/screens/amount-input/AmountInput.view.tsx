@@ -6,14 +6,15 @@ import { SpaceFiller } from '../../../../common/components/SpaceFiller';
 
 export interface AmountInputViewProps {
   onSubmit: () => void;
+  amount: number;
   onAmountChange: (amount: number) => void;
 }
 
-export const AmountInputView: React.SFC<AmountInputViewProps> = ({ onSubmit, onAmountChange }) => (
+export const AmountInputView: React.SFC<AmountInputViewProps> = ({ onSubmit, amount, onAmountChange }) => (
   <Fragment>
     <SpaceFiller />
     <Title>Quanto você gostaria de cobrar?</Title>
-    <MoneyInput testID='amountInput' onAmountChange={onAmountChange} />
+    <MoneyInput testID='amountInput' amount={amount} onAmountChange={onAmountChange} />
     <SpaceFiller />
     <Button testID='confirmButton' onPress={onSubmit} label='CONFIRMAR' />
   </Fragment>

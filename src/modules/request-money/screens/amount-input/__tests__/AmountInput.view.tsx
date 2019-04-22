@@ -20,6 +20,7 @@ describe("AmountInput View", () => {
   it("should display a title, a input and a submit button", () => {
     // given
     const props = {
+      amount: 20,
       onSubmit: jest.fn(),
       onAmountChange: jest.fn(),
     };

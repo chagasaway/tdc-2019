@@ -2,9 +2,7 @@ import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
 import { AmountInputContainer, AmountInputContainerProps } from '../AmountInput.container';
-import { createRequestMoney } from '../../../api/RequestMoneyAPI';
-
-jest.mock('../../../api/RequestMoneyAPI');
+import * as RequestMoneyAPI from '../../../api/RequestMoneyAPI';
 
 const render = (props: AmountInputContainerProps) => {
   const testRenderer = TestRenderer.create(<AmountInputContainer {...props} />);
@@ -38,6 +36,13 @@ describe("AmountInput Container", () => {
 
   it("should create a request money and navigate to QRCode", async () => {
     // given
+    const requestMoney = {
+      id: 123,
+      amount: 100,
+      qrCode: 'abcde',
+    };
+    const mock = jest.spyOn(RequestMoneyAPI, 'createRequestMoney');
+    mock.mockReturnValue(Promise.resolve(requestMoney));
     const props = {
       navigateToQRCode: jest.fn(),
     };
@@ -48,12 +53,14 @@ describe("AmountInput Container", () => {
     await testInstance.instance.handleSubmit();
 
     // then
-    expect(createRequestMoney).toBeCalledWith(100);
+    expect(mock).toBeCalledWith(100);
     expect(props.navigateToQRCode).toBeCalled();
   });
 
-  it.skip("should handle an error on creating a request money by navigating to Error", async () => {
+  it("should handle an error on creating a request money by navigating to Error", async () => {
     // given
+    const mock = jest.spyOn(RequestMoneyAPI, 'createRequestMoney');
+    mock.mockReturnValue(Promise.reject());
     const props = {
       navigateToError: jest.fn(),
     };
@@ -64,7 +71,7 @@ describe("AmountInput Container", () => {
     await testInstance.instance.handleSubmit();
 
     // then
-    expect(createRequestMoney).toBeCalledWith(100);
+    expect(mock).toBeCalledWith(100);
     expect(props.navigateToError).toBeCalled();
   });
 });

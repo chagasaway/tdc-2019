@@ -34,6 +34,7 @@ export class AmountInputContainer extends Component<AmountInputContainerProps, A
   render() {
     return (
       <AmountInputView
+        amount={this.state.amount}
         onAmountChange={this.handleAmountChange}
         onSubmit={this.handleSubmit}
       />

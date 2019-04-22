@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "jest --config jest.config.js"
+    "test": "jest --silent --config jest.config.js src",
+    "test:e2e": "jest --silent --config jest.config.js e2e"
   },
   "dependencies": {
     "expo": "^32.0.0",
@@ -20,6 +21,10 @@
     "@types/react-native": "0.57.42",
     "@types/react-test-renderer": "16.8.1",
     "babel-preset-expo": "^5.0.0",
+    "bunyan": "^1.8.12",
+    "detox": "^12.4.0",
+    "detox-expo-helpers": "^0.6.0",
+    "expo-detox-hook": "^1.0.10",
     "jest": "24.7.1",
     "jest-fetch-mock": "2.1.2",
     "react-native-testing-library": "1.7.0",
@@ -28,5 +33,15 @@
     "typescript": "3.4.3",
     "wait-for-expect": "1.1.1"
   },
-  "private": true
+  "private": true,
+  "detox": {
+    "configurations": {
+      "ios.sim": {
+        "binaryPath": "bin/Exponent.app",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    },
+    "test-runner": "jest"
+  }
 }
