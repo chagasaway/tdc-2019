@@ -7,6 +7,13 @@ import { ErrorPageObject } from '../../../integration-tests/page-objects/ErrorPa
 import { renderApp } from '../../../integration-tests/config/renderApp';
 import { requestMoney } from '../../../integration-tests/mocks/createRequestMoney';
 
+jest.mock('react-native-gesture-handler', () => ({
+  PanGestureHandler: 'PanGestureHandler',
+  BaseButton: 'BaseButton',
+}));
+
+jest.mock('react-native-safe-area-view');
+
 describe('Request Money', () => {
   describe('success QR code creation & share', () => {
     let app: RenderAPI;

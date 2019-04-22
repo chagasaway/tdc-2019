@@ -19,12 +19,10 @@ export class AmountInputPageObject extends PageObject {
     }
   }
 
-  public findByTestIdInPage(testID: string) {
-    return this.page().find((node) => node.props.testID === testID);
-  }
-
   public getInput() {
-    return this.findByTestIdInPage(AmountInputPageObject.inputId);
+    return this.page().find(
+      (node) => node.props.testID === AmountInputPageObject.inputId && node.props.onChangeText
+    );
   }
 
   public fillAmount(amount: string) {
@@ -38,7 +36,7 @@ export class AmountInputPageObject extends PageObject {
   }
 
   public getConfirmButton() {
-    return this.findByTestIdInPage(AmountInputPageObject.confirmButtonId);
+    return this.page().find((node) => node.props.testID === AmountInputPageObject.confirmButtonId);
   }
 
   public confirm = async () => {
