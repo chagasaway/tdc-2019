@@ -9,25 +9,11 @@
     "esModuleInterop": true,
     "outDir": ".build",
     "sourceMap": true,
-    "baseUrl": "src",
-    "paths": {
-      "common/*": [
-        "common/*"
-      ],
-      "modules/*": [
-        "modules/*"
-      ],
-      "navigation/*": [
-        "navigation/*"
-      ],
-      "typings/*": [
-        "typings/*"
-      ]
-    },
+    "baseUrl": "."
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx"
+    "./**/*.ts",
+    "./**/*.tsx"
   ],
   "exclude": [
     "**/node_modules/*"

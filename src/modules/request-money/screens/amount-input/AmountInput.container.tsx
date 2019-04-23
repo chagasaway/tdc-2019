@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { AmountInputView } from './AmountInput.view';
-import { RequestMoney, createRequestMoney } from 'modules/request-money/api/RequestMoneyAPI';
+import { RequestMoney, createRequestMoney } from 'src/modules/request-money/api/RequestMoneyAPI';
 
 export interface AmountInputContainerProps {
   navigateBack: () => boolean;

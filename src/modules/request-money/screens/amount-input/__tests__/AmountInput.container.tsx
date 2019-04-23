@@ -1,7 +1,7 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
-import * as RequestMoneyAPI from 'modules/request-money/api/RequestMoneyAPI';
+import * as RequestMoneyAPI from 'src/modules/request-money/api/RequestMoneyAPI';
 import { AmountInputContainer, AmountInputContainerProps } from '../AmountInput.container';
 
 const render = (props: AmountInputContainerProps) => {

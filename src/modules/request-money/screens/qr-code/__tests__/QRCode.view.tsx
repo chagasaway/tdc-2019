@@ -1,8 +1,8 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
-import { Title } from 'common/components/Title';
-import { Button } from 'common/components/Button';
+import { Title } from 'src/common/components/Title';
+import { Button } from 'src/common/components/Button';
 import { QRCodeView, QRCodeViewProps } from '../QRCode.view';
 
 const render = (props: QRCodeViewProps) => {

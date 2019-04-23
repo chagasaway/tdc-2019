@@ -22,7 +22,7 @@ module.exports = {
     "./jest.setup.ts"
   ],
   "moduleDirectories": [
-    "src",
+    ".",
     "node_modules"
   ]
 }

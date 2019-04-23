@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { NavigationInjectedProps } from 'react-navigation';
-import { BaseScreen } from 'common/components/BaseScreen';
-import { RequestMoneyScreens } from 'modules/request-money/navigation/RequestMoneyNavigator';
-import { RequestMoney } from 'modules/request-money/api/RequestMoneyAPI';
+import { BaseScreen } from 'src/common/components/BaseScreen';
+import { RequestMoneyScreens } from 'src/modules/request-money/navigation/RequestMoneyNavigator';
+import { RequestMoney } from 'src/modules/request-money/api/RequestMoneyAPI';
 import { AmountInputContainer } from './AmountInput.container';
 
 export class AmountInputScreen extends Component<NavigationInjectedProps> {
