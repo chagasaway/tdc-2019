@@ -2,15 +2,15 @@ import { RenderAPI } from 'react-native-testing-library';
 import waitForExpect from 'wait-for-expect';
 import { FetchMock } from 'jest-fetch-mock/types';
 
-import { AmountInputPageObject } from '../../../integration-tests/page-objects/AmountInputPageObject';
-import { QRCodePageObject } from '../../../integration-tests/page-objects/QRCodePageObject';
-import { ErrorPageObject } from '../../../integration-tests/page-objects/ErrorPageObject';
-import { renderApp } from '../../../integration-tests/config/renderApp';
-import { requestMoney } from '../../../integration-tests/mocks/createRequestMoney';
+import { AmountInputPageObject } from '../page-objects/AmountInputPageObject';
+import { QRCodePageObject } from '../page-objects/QRCodePageObject';
+import { ErrorPageObject } from '../page-objects/ErrorPageObject';
+import { renderApp } from '../config/renderApp';
+import { requestMoney } from '../mocks/createRequestMoney';
 
 const fetchMock = (fetch as FetchMock);
 
-describe('Request Money', () => {
+describe('RequestMoney', () => {
   describe('success QR code creation & share', () => {
     let app: RenderAPI;
 

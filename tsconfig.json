@@ -5,15 +5,29 @@
     "jsx": "react",
     "strict": true,
     "moduleResolution": "node",
-    "baseUrl": "./packages",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "outDir": ".build",
-    "sourceMap": true
+    "sourceMap": true,
+    "baseUrl": "src",
+    "paths": {
+      "common/*": [
+        "common/*"
+      ],
+      "modules/*": [
+        "modules/*"
+      ],
+      "navigation/*": [
+        "navigation/*"
+      ],
+      "typings/*": [
+        "typings/*"
+      ]
+    },
   },
   "include": [
-    "packages/**/*.ts",
-    "packages/**/*.tsx"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
     "**/node_modules/*"
