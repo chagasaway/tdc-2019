@@ -10,8 +10,8 @@ const render = (props: AmountInputContainerProps) => {
   return { testInstance, testRenderer };
 };
 
-describe("AmountInput Container", () => {
-  it("should start with a zeroed current amount", () => {
+describe('AmountInput Container', () => {
+  it('should start with a zeroed current amount', () => {
     // given
     const props = {};
 
@@ -22,7 +22,7 @@ describe("AmountInput Container", () => {
     expect(testInstance.instance.state.amount).toEqual(0);
   });
 
-  it("should update current amount", () => {
+  it('should update current amount', () => {
     // given
     const props = {};
 
@@ -34,7 +34,7 @@ describe("AmountInput Container", () => {
     expect(testInstance.instance.state.amount).toEqual(100);
   });
 
-  it("should create a request money and navigate to QRCode", async () => {
+  it('should create a request money and navigate to QRCode', async () => {
     // given
     const requestMoney = {
       id: 123,
@@ -57,7 +57,7 @@ describe("AmountInput Container", () => {
     expect(props.navigateToQRCode).toBeCalled();
   });
 
-  it("should handle an error on creating a request money by navigating to Error", async () => {
+  it('should handle an error on creating a request money by navigating to Error', async () => {
     // given
     const mock = jest.spyOn(RequestMoneyAPI, 'createRequestMoney');
     mock.mockReturnValue(Promise.reject());

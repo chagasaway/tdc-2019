@@ -13,9 +13,9 @@ interface AmountInputContainerState {
 }
 
 export class AmountInputContainer extends Component<AmountInputContainerProps, AmountInputContainerState> {
-  state = {
+  public state = {
     amount: 0,
-  }
+  };
 
   private handleAmountChange = (amount: number) => {
     this.setState({ amount });
@@ -31,7 +31,7 @@ export class AmountInputContainer extends Component<AmountInputContainerProps, A
     }
   }
 
-  render() {
+  public render() {
     return (
       <AmountInputView
         amount={this.state.amount}

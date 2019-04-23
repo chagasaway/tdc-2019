@@ -14,8 +14,8 @@ const render = (props: ErrorViewProps) => {
   return { title, button };
 };
 
-describe("Error View", () => {
-  it("should display a title and a back button", () => {
+describe('Error View', () => {
+  it('should display a title and a back button', () => {
     // given
     const props = {
       navigateBack: jest.fn(),

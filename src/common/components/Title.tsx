@@ -9,5 +9,5 @@ export const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     fontSize: 25,
-  }
+  },
 });

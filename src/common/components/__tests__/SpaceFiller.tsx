@@ -12,8 +12,8 @@ const render = () => {
   return { view };
 };
 
-describe("SpaceFiller", () => {
-  it("should display a flex view just to fill empty spaces", () => {
+describe('SpaceFiller', () => {
+  it('should display a flex view just to fill empty spaces', () => {
     // given
     const expectedStyle = { flex: 1 };
 

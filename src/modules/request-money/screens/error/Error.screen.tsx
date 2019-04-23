@@ -9,7 +9,7 @@ export class ErrorScreen extends Component<NavigationInjectedProps> {
     return true;
   }
 
-  render() {
+  public render() {
     return (
       <BaseScreen testID='ErrorScreen'>
         <ErrorView navigateBack={this.navigateBack} />

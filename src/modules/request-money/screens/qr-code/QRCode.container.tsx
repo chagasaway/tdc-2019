@@ -13,7 +13,7 @@ export class QRCodeContainer extends Component<QRCodeContainerProps> {
     this.props.navigateBack();
   }
 
-  render() {
+  public render() {
     const { qrCode } = this.props;
     return (
       <QRCodeView

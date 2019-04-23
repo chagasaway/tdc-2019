@@ -9,7 +9,7 @@ export const createRequestMoney = async (amount: number): Promise<RequestMoney> 
     method: 'POST',
     body: JSON.stringify({ amount }),
     headers: new Headers({
-      'Content-type': 'application/json'
+      'Content-type': 'application/json',
     }),
   };
   const response = await fetch('http://localhost:3000/request-money', options);
@@ -20,4 +20,4 @@ export const createRequestMoney = async (amount: number): Promise<RequestMoney> 
   }
 
   throw new Error(`HTTP response has status ${response.statusText}`);
-}
+};

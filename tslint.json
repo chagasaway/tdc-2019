@@ -1,0 +1,62 @@
+{
+  "extends": "tslint:latest",
+  "rules": {
+    "curly": true,
+    "object-literal-sort-keys": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "any",
+        "named-imports-order": "any"
+      }
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "max-line-length": [
+      false
+    ],
+    "eofline": true,
+    "member-ordering": [
+      false
+    ],
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": [
+      false
+    ],
+    "no-default-export": true,
+    "interface-name": false,
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-typecast",
+      "check-type",
+      "check-typecast",
+      "check-module"
+    ],
+    "no-object-literal-type-assertion": false,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never",
+        "esSpecCompliant": true
+      }
+    ]
+  },
+  "jsRules": {
+    "curly": true,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "object-literal-sort-keys": false
+  },
+  "rulesDirectory": []
+}

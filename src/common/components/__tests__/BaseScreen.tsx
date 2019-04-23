@@ -12,8 +12,8 @@ const render = (props: React.PropsWithChildren<{}>) => {
   return { keyboardAvoidingView };
 };
 
-describe("BaseScreen", () => {
-  it("should display a view with keyboard handling with correct styles", () => {
+describe('BaseScreen', () => {
+  it('should display a view with keyboard handling with correct styles', () => {
     // given
     const props = {
       children: 'any children',

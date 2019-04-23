@@ -13,12 +13,12 @@ const render = (props: ButtonProps) => {
   return { button, buttonText };
 };
 
-describe("Button", () => {
-  it("should display a button", () => {
+describe('Button', () => {
+  it('should display a button', () => {
     // given
     const props = {
       onPress: jest.fn(),
-      label: "A BUTTON LABEL",
+      label: 'A BUTTON LABEL',
     };
 
     // when
@@ -26,6 +26,6 @@ describe("Button", () => {
 
     // then
     expect(button.props.onPress).toBe(props.onPress);
-    expect(buttonText.props.children).toBe("A BUTTON LABEL");
+    expect(buttonText.props.children).toBe('A BUTTON LABEL');
   });
 });

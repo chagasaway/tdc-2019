@@ -10,8 +10,8 @@ const render = (props: NavigationInjectedProps) => {
   return { testInstance, testRenderer };
 };
 
-describe("Error Screen", () => {
-  it("should navigate back", () => {
+describe('Error Screen', () => {
+  it('should navigate back', () => {
     // given
     const props = {
       navigation: {

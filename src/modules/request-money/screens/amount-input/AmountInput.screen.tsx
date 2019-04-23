@@ -19,7 +19,7 @@ export class AmountInputScreen extends Component<NavigationInjectedProps> {
     this.props.navigation.navigate(RequestMoneyScreens.Error);
   }
 
-  render() {
+  public render() {
     return (
       <BaseScreen testID='AmountInputScreen'>
         <AmountInputContainer

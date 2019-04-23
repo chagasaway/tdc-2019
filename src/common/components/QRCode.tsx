@@ -14,5 +14,5 @@ const styles = StyleSheet.create({
   qrCode: {
     textAlign: 'center',
     fontSize: 25,
-  }
+  },
 });

@@ -16,8 +16,8 @@ const render = (props: AmountInputViewProps) => {
   return { title, input, button };
 };
 
-describe("AmountInput View", () => {
-  it("should display a title, a input and a submit button", () => {
+describe('AmountInput View', () => {
+  it('should display a title, a input and a submit button', () => {
     // given
     const props = {
       amount: 20,

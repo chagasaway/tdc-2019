@@ -10,8 +10,8 @@ const render = (props: NavigationInjectedProps) => {
   return { testInstance, testRenderer };
 };
 
-describe("QRCode Screen", () => {
-  it("should navigate back", () => {
+describe('QRCode Screen', () => {
+  it('should navigate back', () => {
     // given
     const qrCode = 'abcde';
     const props = {

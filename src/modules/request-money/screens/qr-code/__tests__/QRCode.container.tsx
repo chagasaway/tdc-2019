@@ -12,8 +12,8 @@ const render = (props: QRCodeContainerProps) => {
   return { testInstance, testRenderer };
 };
 
-describe("QRCode Container", () => {
-  it("should share the qrcode & navigate back", () => {
+describe('QRCode Container', () => {
+  it('should share the qrcode & navigate back', () => {
     // given
     const props = {
       navigateBack: jest.fn(),

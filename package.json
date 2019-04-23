@@ -5,6 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
+    "lint": "tslint --project ./tsconfig.json --config ./tslint.json",
+    "lint:fix": "tslint --fix --project ./tsconfig.json --config ./tslint.json",
     "test:unit": "jest --silent --config jest.config.js src",
     "test:integration": "jest --silent --config jest.config.js integration-tests",
     "test:e2e": "jest --silent --config jest.config.js e2e"
@@ -31,6 +33,7 @@
     "react-native-testing-library": "1.7.0",
     "react-test-renderer": "16.8.6",
     "ts-jest": "24.0.2",
+    "tslint": "5.16.0",
     "typescript": "3.4.3",
     "wait-for-expect": "1.1.1"
   },

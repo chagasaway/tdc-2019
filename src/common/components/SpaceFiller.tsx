@@ -9,4 +9,4 @@ const styles = StyleSheet.create({
   filler: {
     flex: 1,
   },
-})
+});
