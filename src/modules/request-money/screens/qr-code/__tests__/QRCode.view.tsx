@@ -18,7 +18,7 @@ describe('QRCode View', () => {
   it('should display a title and a share button', () => {
     // given
     const props = {
-      qrCode: 'abcde',
+      id: 'abcde',
       onShare: jest.fn(),
     };
 

@@ -39,7 +39,6 @@ describe('AmountInput Container', () => {
     const requestMoney = {
       id: 123,
       amount: 100,
-      qrCode: 'abcde',
     };
     const mock = jest.spyOn(RequestMoneyAPI, 'createRequestMoney');
     mock.mockReturnValue(Promise.resolve(requestMoney));

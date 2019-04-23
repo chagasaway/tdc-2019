@@ -38,7 +38,6 @@ describe('AmountInput Screen', () => {
     const requestMoney = {
       id: 12,
       amount: 1000,
-      qrCode: 'abcde',
     };
 
     // when
