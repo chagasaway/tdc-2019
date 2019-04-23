@@ -1,6 +1,6 @@
 export class QRCodePageObject {
   public async getScreen() {
-    return await element(by.id('QRCodeScreen'));
+    return element(by.id('QRCodeScreen'));
   }
 
   public async share() {

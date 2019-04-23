@@ -4,6 +4,6 @@ import { App } from '../../src/App';
 
 export function renderApp() {
   return render(
-    <App />
+    <App />,
   );
 }

@@ -26,6 +26,7 @@
     "no-submodule-imports": [
       false
     ],
+    "no-var-requires": false,
     "no-default-export": true,
     "interface-name": false,
     "whitespace": [
