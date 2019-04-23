@@ -30,4 +30,9 @@ describe('Request money', () => {
     await qrCodePage.assertIsShared();
   });
 
+  it('should should show amount input screen again', async () => {
+    const qrCodePage = new AmountInputPageObject();
+    await qrCodePage.assertIsVisible();
+  });
+
 });
