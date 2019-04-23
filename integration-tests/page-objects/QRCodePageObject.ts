@@ -9,12 +9,12 @@ export class QRCodePageObject extends PageObject {
     super(app, 'QRCodeScreen');
   }
 
-  private getCloseButton() {
+  private getShareButton() {
     return this.page().find((node) => node.props.testID === QRCodePageObject.shareButtonId);
   }
 
   public async share() {
-    const shareButton = this.getCloseButton();
+    const shareButton = this.getShareButton();
     fireEvent.press(shareButton);
     return new AmountInputPageObject(this.app);
   }
