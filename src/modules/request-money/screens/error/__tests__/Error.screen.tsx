@@ -1,7 +1,7 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-
 import { NavigationInjectedProps } from 'react-navigation';
+
 import { ErrorScreen } from '../Error.screen';
 
 const render = (props: NavigationInjectedProps) => {
@@ -10,8 +10,8 @@ const render = (props: NavigationInjectedProps) => {
   return { testInstance, testRenderer };
 };
 
-describe("Error Screen", () => {
-  it("should navigate back", () => {
+describe('Error Screen', () => {
+  it('should navigate back', () => {
     // given
     const props = {
       navigation: {

@@ -12,11 +12,11 @@ const render = (props: React.PropsWithChildren<{}>) => {
   return { title };
 };
 
-describe("Title", () => {
-  it("should display a text with correct styles", () => {
+describe('Title', () => {
+  it('should display a text with correct styles', () => {
     // given
     const props = {
-      children: "Title",
+      children: 'Title',
     };
 
     // when

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { AmountInputView } from './AmountInput.view';
-import { RequestMoney, createRequestMoney } from '../../api/RequestMoneyAPI';
+import { RequestMoney, createRequestMoney } from 'src/modules/request-money/api/RequestMoneyAPI';
 
 export interface AmountInputContainerProps {
   navigateBack: () => boolean;
@@ -13,9 +13,9 @@ interface AmountInputContainerState {
 }
 
 export class AmountInputContainer extends Component<AmountInputContainerProps, AmountInputContainerState> {
-  state = {
+  public state = {
     amount: 0,
-  }
+  };
 
   private handleAmountChange = (amount: number) => {
     this.setState({ amount });
@@ -31,7 +31,7 @@ export class AmountInputContainer extends Component<AmountInputContainerProps, A
     }
   }
 
-  render() {
+  public render() {
     return (
       <AmountInputView
         amount={this.state.amount}

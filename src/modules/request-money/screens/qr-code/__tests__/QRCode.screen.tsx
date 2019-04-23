@@ -1,7 +1,7 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-
 import { NavigationInjectedProps } from 'react-navigation';
+
 import { QRCodeScreen } from '../QRCode.screen';
 
 const render = (props: NavigationInjectedProps) => {
@@ -10,14 +10,14 @@ const render = (props: NavigationInjectedProps) => {
   return { testInstance, testRenderer };
 };
 
-describe("QRCode Screen", () => {
-  it("should navigate back", () => {
+describe('QRCode Screen', () => {
+  it('should navigate back', () => {
     // given
-    const qrCode = 'abcde';
+    const id = 123;
     const props = {
       navigation: {
         pop: jest.fn(),
-        getParam: jest.fn().mockReturnValue(qrCode),
+        getParam: jest.fn().mockReturnValue(id),
       },
     };
 

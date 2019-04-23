@@ -21,7 +21,7 @@ export class AmountInputPageObject extends PageObject {
 
   public getInput() {
     return this.page().find(
-      (node) => node.props.testID === AmountInputPageObject.inputId && node.props.onChangeText
+      (node) => node.props.testID === AmountInputPageObject.inputId && node.props.onChangeText,
     );
   }
 

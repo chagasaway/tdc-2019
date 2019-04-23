@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
-import { Button } from '../../../../common/components/Button';
-import { Title } from '../../../../common/components/Title';
-import { MoneyInput } from '../../../../common/components/MoneyInput';
-import { SpaceFiller } from '../../../../common/components/SpaceFiller';
+import { Button } from 'src/common/components/Button';
+import { Title } from 'src/common/components/Title';
+import { MoneyInput } from 'src/common/components/MoneyInput';
+import { SpaceFiller } from 'src/common/components/SpaceFiller';
 
 export interface AmountInputViewProps {
   onSubmit: () => void;

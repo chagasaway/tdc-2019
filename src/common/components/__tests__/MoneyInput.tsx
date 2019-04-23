@@ -12,8 +12,8 @@ const render = (props: MoneyInputProps) => {
   return { textInput };
 };
 
-describe("MoneyInput", () => {
-  it("should display a input with correct styles", () => {
+describe('MoneyInput', () => {
+  it('should display a input with correct styles', () => {
     // given
     const props = {
       amount: 20,
@@ -31,8 +31,8 @@ describe("MoneyInput", () => {
   });
 });
 
-describe("textToMoney", () => {
-  it("should convert a text to an integer number", () => {
+describe('textToMoney', () => {
+  it('should convert a text to an integer number', () => {
     // given
     const text = '1000';
 
@@ -43,4 +43,3 @@ describe("textToMoney", () => {
     expect(result).toEqual(1000);
   });
 });
-

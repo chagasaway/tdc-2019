@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavigationInjectedProps } from 'react-navigation';
+import { BaseScreen } from 'src/common/components/BaseScreen';
 import { QRCodeContainer } from './QRCode.container';
-import { BaseScreen } from '../../../../common/components/BaseScreen';
 
 export class QRCodeScreen extends Component<NavigationInjectedProps> {
   private navigateBack = () => {
@@ -9,12 +9,12 @@ export class QRCodeScreen extends Component<NavigationInjectedProps> {
     return true;
   }
 
-  render() {
-    const qrCode = this.props.navigation.getParam('qrCode');
+  public render() {
+    const id = this.props.navigation.getParam('id');
     return (
       <BaseScreen testID='QRCodeScreen'>
         <QRCodeContainer
-          qrCode={qrCode}
+          id={id}
           navigateBack={this.navigateBack}
         />
       </BaseScreen>

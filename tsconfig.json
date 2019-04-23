@@ -5,15 +5,15 @@
     "jsx": "react",
     "strict": true,
     "moduleResolution": "node",
-    "baseUrl": "./packages",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "outDir": ".build",
-    "sourceMap": true
+    "sourceMap": true,
+    "baseUrl": "."
   },
   "include": [
-    "packages/**/*.ts",
-    "packages/**/*.tsx"
+    "./**/*.ts",
+    "./**/*.tsx"
   ],
   "exclude": [
     "**/node_modules/*"

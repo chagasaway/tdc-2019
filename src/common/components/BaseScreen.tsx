@@ -6,7 +6,7 @@ interface BaseScreenProps {
 }
 
 export const BaseScreen: React.SFC<BaseScreenProps> = ({ children, testID }) => (
-  <KeyboardAvoidingView testID={testID} style={styles.wrapper} behavior="padding" enabled keyboardVerticalOffset={120}>
+  <KeyboardAvoidingView testID={testID} style={styles.wrapper} behavior='padding' enabled keyboardVerticalOffset={120}>
     {children}
   </KeyboardAvoidingView>
 );
@@ -17,5 +17,5 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 20,
     paddingHorizontal: 15,
-  }
-})
+  },
+});

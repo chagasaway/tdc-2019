@@ -1,10 +1,10 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
+import { Title } from 'src/common/components/Title';
+import { MoneyInput } from 'src/common/components/MoneyInput';
+import { Button } from 'src/common/components/Button';
 import { AmountInputView, AmountInputViewProps } from '../AmountInput.view';
-import { Title } from '../../../../../common/components/Title';
-import { MoneyInput } from '../../../../../common/components/MoneyInput';
-import { Button } from '../../../../../common/components/Button';
 
 const render = (props: AmountInputViewProps) => {
   const testRenderer = TestRenderer.create(<AmountInputView {...props} />);
@@ -16,8 +16,8 @@ const render = (props: AmountInputViewProps) => {
   return { title, input, button };
 };
 
-describe("AmountInput View", () => {
-  it("should display a title, a input and a submit button", () => {
+describe('AmountInput View', () => {
+  it('should display a title, a input and a submit button', () => {
     // given
     const props = {
       amount: 20,

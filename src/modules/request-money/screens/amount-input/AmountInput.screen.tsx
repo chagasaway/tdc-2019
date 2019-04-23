@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { NavigationInjectedProps } from 'react-navigation';
-import { RequestMoneyScreens } from '../../navigation/RequestMoneyNavigator';
+import { BaseScreen } from 'src/common/components/BaseScreen';
+import { RequestMoneyScreens } from 'src/modules/request-money/navigation/RequestMoneyNavigator';
+import { RequestMoney } from 'src/modules/request-money/api/RequestMoneyAPI';
 import { AmountInputContainer } from './AmountInput.container';
-import { BaseScreen } from '../../../../common/components/BaseScreen';
-import { RequestMoney } from '../../api/RequestMoneyAPI';
 
 export class AmountInputScreen extends Component<NavigationInjectedProps> {
   private navigateBack = () => {
@@ -19,7 +19,7 @@ export class AmountInputScreen extends Component<NavigationInjectedProps> {
     this.props.navigation.navigate(RequestMoneyScreens.Error);
   }
 
-  render() {
+  public render() {
     return (
       <BaseScreen testID='AmountInputScreen'>
         <AmountInputContainer

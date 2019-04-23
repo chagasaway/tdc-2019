@@ -1,7 +1,6 @@
 export class AmountInputPageObject {
-
   public async getScreen() {
-    return await element(by.id('AmountInputScreen'));
+    return element(by.id('AmountInputScreen'));
   }
 
   public async fillAmount(amount: number) {
@@ -11,5 +10,4 @@ export class AmountInputPageObject {
   public async confirm() {
     await element(by.id('confirmButton')).tap();
   }
-
 }

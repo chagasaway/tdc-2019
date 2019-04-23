@@ -1,9 +1,9 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
+import { Title } from 'src/common/components/Title';
+import { Button } from 'src/common/components/Button';
 import { QRCodeView, QRCodeViewProps } from '../QRCode.view';
-import { Title } from '../../../../../common/components/Title';
-import { Button } from '../../../../../common/components/Button';
 
 const render = (props: QRCodeViewProps) => {
   const testRenderer = TestRenderer.create(<QRCodeView {...props} />);
@@ -14,11 +14,11 @@ const render = (props: QRCodeViewProps) => {
   return { title, button };
 };
 
-describe("QRCode View", () => {
-  it("should display a title and a share button", () => {
+describe('QRCode View', () => {
+  it('should display a title and a share button', () => {
     // given
     const props = {
-      qrCode: 'abcde',
+      id: 'abcde',
       onShare: jest.fn(),
     };
 

@@ -4,7 +4,7 @@ import TestRenderer from 'react-test-renderer';
 
 import { QRCodeContainer, QRCodeContainerProps } from '../QRCode.container';
 
-jest.mock('../../../api/RequestMoneyAPI');
+jest.mock('src/modules/request-money/api/RequestMoneyAPI');
 
 const render = (props: QRCodeContainerProps) => {
   const testRenderer = TestRenderer.create(<QRCodeContainer {...props} />);
@@ -12,8 +12,8 @@ const render = (props: QRCodeContainerProps) => {
   return { testInstance, testRenderer };
 };
 
-describe("QRCode Container", () => {
-  it("should share the qrcode & navigate back", () => {
+describe('QRCode Container', () => {
+  it('should share the qrcode & navigate back', () => {
     // given
     const props = {
       navigateBack: jest.fn(),

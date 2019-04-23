@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { QRCodeView } from './QRCode.view';
 import { Alert } from 'react-native';
+import { QRCodeView } from './QRCode.view';
 
 export interface QRCodeContainerProps {
-  qrCode: string;
+  id: string;
   navigateBack: () => boolean;
 }
 
@@ -13,11 +13,11 @@ export class QRCodeContainer extends Component<QRCodeContainerProps> {
     this.props.navigateBack();
   }
 
-  render() {
-    const { qrCode } = this.props;
+  public render() {
+    const { id } = this.props;
     return (
       <QRCodeView
-        qrCode={qrCode}
+        id={id}
         onShare={this.handleShare}
       />
     );

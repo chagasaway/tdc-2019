@@ -8,8 +8,8 @@ export interface MoneyInputProps {
 }
 
 export const textToMoney = (text: string) => {
-  return parseInt(text);
-}
+  return parseInt(text, 10);
+};
 
 export const MoneyInput: React.SFC<MoneyInputProps> = ({ testID, amount, onAmountChange }) => (
   <TextInput
@@ -17,8 +17,8 @@ export const MoneyInput: React.SFC<MoneyInputProps> = ({ testID, amount, onAmoun
     value={amount.toString()}
     onChangeText={(text) => onAmountChange(textToMoney(text))}
     style={styles.input}
-    keyboardType="numeric"
-    selectionColor="#000"
+    keyboardType='numeric'
+    selectionColor='#000'
   />
 );
 
@@ -28,4 +28,4 @@ export const styles = StyleSheet.create({
     fontSize: 40,
     textAlign: 'center',
   },
-})
+});

@@ -1,9 +1,9 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
+import { Title } from 'src/common/components/Title';
+import { Button } from 'src/common/components/Button';
 import { ErrorView, ErrorViewProps } from '../Error.view';
-import { Title } from '../../../../../common/components/Title';
-import { Button } from '../../../../../common/components/Button';
 
 const render = (props: ErrorViewProps) => {
   const testRenderer = TestRenderer.create(<ErrorView {...props} />);
@@ -14,8 +14,8 @@ const render = (props: ErrorViewProps) => {
   return { title, button };
 };
 
-describe("Error View", () => {
-  it("should display a title and a back button", () => {
+describe('Error View', () => {
+  it('should display a title and a back button', () => {
     // given
     const props = {
       navigateBack: jest.fn(),

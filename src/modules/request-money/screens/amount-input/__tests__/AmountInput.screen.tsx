@@ -1,9 +1,9 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-
 import { NavigationInjectedProps } from 'react-navigation';
+
+import { RequestMoneyScreens } from 'src/modules/request-money/navigation/RequestMoneyNavigator';
 import { AmountInputScreen } from '../AmountInput.screen';
-import { RequestMoneyScreens } from '../../../navigation/RequestMoneyNavigator';
 
 const render = (props: NavigationInjectedProps) => {
   const testRenderer = TestRenderer.create(<AmountInputScreen {...props} />);
@@ -11,8 +11,8 @@ const render = (props: NavigationInjectedProps) => {
   return { testInstance, testRenderer };
 };
 
-describe("AmountInput Screen", () => {
-  it("should navigate back", () => {
+describe('AmountInput Screen', () => {
+  it('should navigate back', () => {
     // given
     const props = {
       navigation: {
@@ -28,7 +28,7 @@ describe("AmountInput Screen", () => {
     expect(props.navigation.pop).toBeCalled();
   });
 
-  it("should navigate to QRCode screen", () => {
+  it('should navigate to QRCode screen', () => {
     // given
     const props = {
       navigation: {
@@ -38,8 +38,7 @@ describe("AmountInput Screen", () => {
     const requestMoney = {
       id: 12,
       amount: 1000,
-      qrCode: 'abcde',
-    }
+    };
 
     // when
     const { testInstance } = render(props as any);
@@ -49,7 +48,7 @@ describe("AmountInput Screen", () => {
     expect(props.navigation.navigate).toBeCalledWith(RequestMoneyScreens.QRCode, requestMoney);
   });
 
-  it("should navigate to Error screen", () => {
+  it('should navigate to Error screen', () => {
     // given
     const props = {
       navigation: {
