@@ -1,10 +1,10 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
+import { Title } from 'common/components/Title';
+import { MoneyInput } from 'common/components/MoneyInput';
+import { Button } from 'common/components/Button';
 import { AmountInputView, AmountInputViewProps } from '../AmountInput.view';
-import { Title } from '../../../../../common/components/Title';
-import { MoneyInput } from '../../../../../common/components/MoneyInput';
-import { Button } from '../../../../../common/components/Button';
 
 const render = (props: AmountInputViewProps) => {
   const testRenderer = TestRenderer.create(<AmountInputView {...props} />);

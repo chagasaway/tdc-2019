@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import { Button } from '../../../../common/components/Button';
-import { Title } from '../../../../common/components/Title';
-import { SpaceFiller } from '../../../../common/components/SpaceFiller';
+import { Button } from 'common/components/Button';
+import { Title } from 'common/components/Title';
+import { SpaceFiller } from 'common/components/SpaceFiller';
 
 export interface ErrorViewProps {
   navigateBack: () => void;

@@ -10,7 +10,7 @@ export const createRequestMoney = async (amount: number): Promise<RequestMoney> 
     body: JSON.stringify({ amount }),
     headers: new Headers({
       'Content-type': 'application/json'
-    })
+    }),
   };
   const response = await fetch('http://localhost:3000/request-money', options);
 

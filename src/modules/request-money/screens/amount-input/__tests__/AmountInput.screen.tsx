@@ -1,9 +1,9 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-
 import { NavigationInjectedProps } from 'react-navigation';
+
+import { RequestMoneyScreens } from 'modules/request-money/navigation/RequestMoneyNavigator';
 import { AmountInputScreen } from '../AmountInput.screen';
-import { RequestMoneyScreens } from '../../../navigation/RequestMoneyNavigator';
 
 const render = (props: NavigationInjectedProps) => {
   const testRenderer = TestRenderer.create(<AmountInputScreen {...props} />);

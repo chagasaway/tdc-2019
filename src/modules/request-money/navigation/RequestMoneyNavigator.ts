@@ -1,6 +1,6 @@
-import { AmountInputScreen } from "../screens/amount-input/AmountInput.screen";
-import { QRCodeScreen } from "../screens/qr-code/QRCode.screen";
-import { ErrorScreen } from "../screens/error/Error.screen";
+import { AmountInputScreen } from "modules/request-money/screens/amount-input/AmountInput.screen";
+import { QRCodeScreen } from "modules/request-money/screens/qr-code/QRCode.screen";
+import { ErrorScreen } from "modules/request-money/screens/error/Error.screen";
 
 export const RequestMoneyScreens = {
   AmountInput: 'RequestMoney/AmountInput',

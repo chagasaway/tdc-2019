@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavigationInjectedProps } from 'react-navigation';
+import { BaseScreen } from 'common/components/BaseScreen';
 import { ErrorView } from './Error.view';
-import { BaseScreen } from '../../../../common/components/BaseScreen';
 
 export class ErrorScreen extends Component<NavigationInjectedProps> {
   private navigateBack = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-
 import { NavigationInjectedProps } from 'react-navigation';
+
 import { QRCodeScreen } from '../QRCode.screen';
 
 const render = (props: NavigationInjectedProps) => {

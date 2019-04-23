@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { QRCodeView } from './QRCode.view';
 import { Alert } from 'react-native';
+import { QRCodeView } from './QRCode.view';
 
 export interface QRCodeContainerProps {
   qrCode: string;

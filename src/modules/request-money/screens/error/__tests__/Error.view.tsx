@@ -1,9 +1,9 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
+import { Title } from 'common/components/Title';
+import { Button } from 'common/components/Button';
 import { ErrorView, ErrorViewProps } from '../Error.view';
-import { Title } from '../../../../../common/components/Title';
-import { Button } from '../../../../../common/components/Button';
 
 const render = (props: ErrorViewProps) => {
   const testRenderer = TestRenderer.create(<ErrorView {...props} />);

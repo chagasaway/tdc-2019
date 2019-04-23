@@ -1,8 +1,8 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
+import * as RequestMoneyAPI from 'modules/request-money/api/RequestMoneyAPI';
 import { AmountInputContainer, AmountInputContainerProps } from '../AmountInput.container';
-import * as RequestMoneyAPI from '../../../api/RequestMoneyAPI';
 
 const render = (props: AmountInputContainerProps) => {
   const testRenderer = TestRenderer.create(<AmountInputContainer {...props} />);
