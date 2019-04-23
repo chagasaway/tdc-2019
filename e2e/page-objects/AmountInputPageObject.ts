@@ -1,5 +1,4 @@
 export class AmountInputPageObject {
-
   public async getScreen() {
     return await element(by.id('AmountInputScreen'));
   }
@@ -11,5 +10,4 @@ export class AmountInputPageObject {
   public async confirm() {
     await element(by.id('confirmButton')).tap();
   }
-
 }
