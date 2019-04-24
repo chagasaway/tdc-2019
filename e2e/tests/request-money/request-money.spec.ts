@@ -1,4 +1,6 @@
-const { reloadApp } = require('detox-expo-helpers');
+import { reloadApp } from 'detox-expo-helpers';
+import { AmountInputPageObject } from '../../page-objects/AmountInputPageObject';
+import { QRCodePageObject } from '../../page-objects/QRCodePageObject';
 
 describe('Request money', () => {
   beforeAll(async () => {
@@ -6,22 +8,31 @@ describe('Request money', () => {
   });
 
   it('should show amount input screen', async () => {
-    await expect(element(by.id('AmountInputScreen'))).toBeVisible();
+    const amountInputPage = new AmountInputPageObject();
+    await amountInputPage.assertIsVisible();
   });
 
-  it('should type request money amount', async () => {
-    await element(by.id('amountInput')).typeText('5');
+  it('should fill the requested amount', async () => {
+    const amountInputPage = new AmountInputPageObject();
+    await amountInputPage.fillAmount(5);
+    await amountInputPage.assertHasAmountOf(5);
   });
 
-  it('should confirm request money', async () => {
-    await element(by.id('confirmButton')).tap();
+  it('should confirm the requested amount', async () => {
+    const amountInputPage = new AmountInputPageObject();
+    const qrCodePage = await amountInputPage.confirm();
+    await qrCodePage.assertIsVisible();
   });
 
-  it('should should show qrcode screen', async () => {
-    await element(by.id('QRCodeScreen')).toBeVisible();
+  it('should share the QR code', async () => {
+    const qrCodePage = new QRCodePageObject();
+    await qrCodePage.share();
+    await qrCodePage.assertIsShared();
   });
 
-  it('should share the qrcode', async () => {
-    await element(by.id('shareButton')).tap();
+  it('should should show amount input screen again', async () => {
+    const qrCodePage = new AmountInputPageObject();
+    await qrCodePage.assertIsVisible();
   });
+
 });

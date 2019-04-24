@@ -13,7 +13,8 @@
   },
   "include": [
     "./**/*.ts",
-    "./**/*.tsx"
+    "./**/*.tsx",
+    "e2e/index.d.ts",
   ],
   "exclude": [
     "**/node_modules/*"

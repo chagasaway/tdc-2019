@@ -24,12 +24,29 @@ Start the application
 npm start
 ```
 
-## :heavy_check_mark: Running tests
+## :heavy_check_mark: Running unit and integration tests
 
 ```sh
 npm run test:unit
 npm run test:integration
-npm run test:e2e
+```
+
+## :heavy_check_mark: Running E2E tests
+
+Download the latest Expo client from https://expo.io/tools#client and extract it to a folder named `bin/Exponent.app` inside the project. Run the following commands:
+
+```sh
+brew tap wix/brew
+brew install applesimutils
+npm install -g detox-cli
+detox test
+```
+
+Do not forget to start the mocked server running the following commands:
+
+```sh
+cd server
+npm start
 ```
 
 ## :sparkles: Running lint
